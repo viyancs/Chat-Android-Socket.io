@@ -2,7 +2,7 @@ Chat Android Socket.io
 ============
 
 this repository is for server from Repository [Chat-Android](<https://github.com/viyancs/Chat-Android>)
-i'm using docket.io and node.js to server of web socket.implementation with mongoodb and mongoose
+i'm using nodejs,express and socket.io to server of web socket,implementation with mongoodb and mongoose
 
 Running The Application
 -----------------------
