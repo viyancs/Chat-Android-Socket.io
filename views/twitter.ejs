@@ -1,0 +1,32 @@
+
+<script src="http://192.168.1.16:3001/socket.io/socket.io.js"></script>
+<script>
+//alert("babi");
+  var socket = io.connect('http://192.168.1.16:8081/');
+  socket.on('message', function (data) {
+   console.log(data);
+    //socket.emit('message',{username:'testing from client'});
+   //console.log("uiiuiuiu");
+  });
+</script>
+<h1><%= title %></h1>  
+<% if (tweets.length) { %>  
+      <ul>  
+        <% tweets.forEach(function(t) { %>  
+          <li>  
+            <h2>  
+              <a href="http://twitter.com/<%= t.from_user %>" rel="external">  
+                <%= t.from_user_name %>  
+                <span><%= t.from_user %></span>  
+              </a>  
+            </h2>  
+            <blockquote>  
+              <p><%= t.text %></p>  
+            </blockquote>  
+            <a href="http://twitter.com/#!/<%= t.from_user %>/status/<%= t.id %>" rel="external">Open</a>  
+          </li>  
+        <% }); %>  
+      </ul>  
+    <% } // endif %>  
+
+
